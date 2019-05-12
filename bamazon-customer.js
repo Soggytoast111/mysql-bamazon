@@ -69,10 +69,12 @@ function inquirerPrompt(){
 
 function processOrder(item_id, quantity){
     if (quantity>itemTable[item_id-1].stock_quantity){
-        console.log("Sorry, we don't have that many of: " + itemTable[item_id].product_name)
+        console.log("Sorry, we don't have that many of: " + itemTable[item_id-1].product_name)
+        setTimeout(function(){
         inquirerPrompt()
+        },100)
     }
-
+    else{
     console.log("You are purchasing x"+ quantity + " " + itemTable[item_id-1].product_name)
     var currency = itemTable[item_id-1].price;
     var numberPrice = Number(currency.replace(/[^0-9.-]+/g,""));
@@ -87,5 +89,5 @@ function processOrder(item_id, quantity){
     connection.query(query, function(err, res){
     connection.end()
     })
-
+    }
 }
