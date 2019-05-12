@@ -1,7 +1,7 @@
 {
   "name": "mysql-bamazon",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bamazon is a command-line app in node.js that simulates a online retailer.  There is no real functionality to the app - this was just an exercise for me to develop some comfort with mysql and access from node.js.",
   "main": "bamazon-customer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
